@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<title>Traders Paradise | Join Telegram</title>
+<title>Traders Paradise</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,281 +16,284 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Outfit',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#050816;
-color:#fff;
+
+background:#05070c;
+color:white;
 overflow-x:hidden;
+
 }
 
-/* Background Glow */
+
+/* Background */
 
 body::before{
-content:'';
+
+content:"";
 position:fixed;
-width:500px;
-height:500px;
-background:#00d4ff25;
-filter:blur(100px);
-top:-150px;
-left:-100px;
+width:100%;
+height:100%;
+
+background:
+
+radial-gradient(circle at top,
+rgba(0,255,120,0.15),
+transparent),
+
+linear-gradient(to bottom,
+#000,
+#071018);
+
 z-index:-1;
+
 }
 
-body::after{
-content:'';
-position:fixed;
-width:400px;
-height:400px;
-background:#4f46e525;
-filter:blur(100px);
-right:-100px;
-bottom:-100px;
-z-index:-1;
+
+/* Container */
+
+.container{
+
+max-width:1100px;
+margin:auto;
+padding:25px;
+
 }
+
 
 /* Hero */
 
 .hero{
 
-min-height:100vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-padding:20px;
-
-}
-
-.card{
-
-max-width:420px;
-width:100%;
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:30px;
-
-padding:40px 30px;
-
 text-align:center;
-
-box-shadow:0 30px 80px rgba(0,0,0,.35);
-
-animation:fade 1s ease;
+padding:60px 20px;
 
 }
+
+
+/* Profile */
+
+.profile{
+
+width:220px;
+border-radius:25px;
+box-shadow:0 0 50px #00ff88;
+border:4px solid #00ff88;
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+
+/* Logo */
 
 .logo{
 
-width:90px;
-height:90px;
-margin:auto;
+width:160px;
+margin-top:30px;
 
-border-radius:50%;
+}
 
-background:linear-gradient(135deg,#00d4ff,#0066ff);
+
+/* Heading */
+
+h1{
+
+font-size:48px;
+margin-top:25px;
+font-weight:800;
+
+}
+
+
+h1 span{
+
+color:#00ff88;
+
+}
+
+
+.sub{
+
+margin-top:15px;
+font-size:20px;
+color:#ccc;
+
+}
+
+
+/* Cards */
+
+.card{
+
+background:rgba(255,255,255,0.06);
+
+backdrop-filter:blur(15px);
+
+padding:35px;
+margin-top:30px;
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.1);
+
+box-shadow:
+0 0 25px rgba(0,255,100,.15);
+
+}
+
+
+.card h2{
+
+color:#00ff88;
+margin-bottom:20px;
+
+}
+
+
+ul{
+
+list-style:none;
+
+}
+
+
+li{
+
+padding:12px;
+font-size:18px;
+
+}
+
+
+/* Stats */
+
+.stats{
 
 display:flex;
 justify-content:center;
-align-items:center;
-
-font-size:38px;
-
-margin-bottom:25px;
-
-box-shadow:0 0 35px #00d4ff66;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
 
 }
+
+
+.stat{
+
+padding:25px;
+min-width:200px;
+border-radius:20px;
+
+background:#10161f;
+
+box-shadow:
+0 0 25px rgba(0,255,150,.15);
+
+}
+
+
+.stat h3{
+
+font-size:30px;
+color:#00ff88;
+
+}
+
+
+/* Button */
+
+.btn{
+
+display:inline-block;
+
+margin-top:40px;
+
+padding:22px 45px;
+
+font-size:22px;
+
+font-weight:bold;
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:white;
+
+background:
+
+linear-gradient(
+45deg,
+#00ff88,
+#00c853);
+
+box-shadow:
+0 0 40px #00ff88;
+
+transition:.3s;
+
+}
+
+
+.btn:hover{
+
+transform:scale(1.08);
+
+}
+
+
+/* Footer */
+
+.footer{
+
+margin-top:50px;
+padding-bottom:40px;
+text-align:center;
+color:#aaa;
+
+}
+
+
+/* Responsive */
+
+@media(max-width:768px){
 
 h1{
 
 font-size:34px;
-margin-bottom:12px;
 
 }
 
-.subtitle{
+.sub{
 
-font-size:16px;
-
-line-height:28px;
-
-opacity:.85;
-
-margin-bottom:28px;
+font-size:17px;
 
 }
 
-.stats{
+.profile{
 
-display:grid;
+width:180px;
 
-grid-template-columns:repeat(3,1fr);
-
-gap:12px;
-
-margin-bottom:30px;
-
-}
-
-.stat{
-
-background:rgba(255,255,255,.06);
-
-padding:15px;
-
-border-radius:15px;
-
-}
-
-.stat h2{
-
-color:#00d4ff;
-
-font-size:24px;
-
-}
-
-.features{
-
-text-align:left;
-
-margin-bottom:35px;
-
-}
-
-.features p{
-
-padding:10px 0;
-
-font-size:15px;
-
-border-bottom:1px solid rgba(255,255,255,.05);
-
-}
-
-.join{
-
-display:block;
-
-padding:18px;
-
-border-radius:16px;
-
-text-decoration:none;
-
-font-weight:700;
-
-font-size:18px;
-
-background:linear-gradient(135deg,#00d4ff,#0066ff);
-
-color:#fff;
-
-transition:.35s;
-
-box-shadow:0 15px 40px rgba(0,212,255,.35);
-
-}
-
-.join:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 25px 60px rgba(0,212,255,.45);
-
-}
-
-.small{
-
-margin-top:20px;
-
-font-size:13px;
-
-opacity:.7;
-
-}
-
-/* Floating */
-
-.float{
-
-position:absolute;
-
-width:14px;
-height:14px;
-
-background:#00d4ff;
-
-border-radius:50%;
-
-animation:move 8s infinite linear;
-
-opacity:.6;
-
-}
-
-.f1{top:15%;left:12%;}
-.f2{top:70%;left:15%;animation-delay:2s;}
-.f3{top:20%;right:12%;animation-delay:3s;}
-.f4{bottom:10%;right:20%;animation-delay:5s;}
-
-@keyframes move{
-
-0%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(-25px);
-}
-
-100%{
-transform:translateY(0px);
 }
 
 }
 
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(40px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-@media(max-width:480px){
-
-.card{
-
-padding:30px 22px;
-
-}
-
-h1{
-
-font-size:28px;
-
-}
-
-}
 
 </style>
-
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -299,85 +304,176 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1376693294321212');
+fbq('init', '1553780022795291');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1376693294321212&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1553780022795291&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code --></head>
-
+<!-- End Meta Pixel Code -->
+</head>
 <body>
 
-<div class="float f1"></div>
-<div class="float f2"></div>
-<div class="float f3"></div>
-<div class="float f4"></div>
 
-<section class="hero">
+<div class="container">
+
+<div class="hero">
+
+
+<!-- YOUR IMAGE -->
+
+<img src="https://i.ibb.co/gbb6rJKk/images-1.jpg"
+class="profile">
+
+
+<br>
+<h1>
+
+Abhay <span>Patil</span>
+
+</h1>
+
+
+<p class="sub">
+
+Professional Forex Trader & Mentor
+
+</p>
+
+
+<a href="https://t.me/+BBvKFWBef5cyYzk1"
+class="btn">
+
+JOIN FREE TELEGRAM
+
+</a>
+
+
+</div>
+
+
 
 <div class="card">
 
-<div class="logo">
-📈
-</div>
+<h2>
 
-<h1>Traders Paradise</h1>
+About Me
 
-<p class="subtitle">
+</h2>
 
-Join our growing Telegram community and access market education, trading ideas, charts, and daily updates.
+<p>
+
+I'm Abhay Patil, a Forex Trader and Mentor. I help aspiring traders understand the Forex market through practical concepts and educational content shared in my Telegram community.
 
 </p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>
+
+What You Will Learn
+
+</h2>
+
+<ul>
+
+<li>✓ Forex Trading Basics</li>
+
+<li>✓ Price Action Trading</li>
+
+<li>✓ Risk Management</li>
+
+<li>✓ Market Structure</li>
+
+<li>✓ Trading Psychology</li>
+
+<li>✓ Entry & Exit Strategies</li>
+
+<li>✓ Live Market Analysis</li>
+
+<li>✓ Beginner To Advanced Concepts</li>
+
+</ul>
+
+</div>
+
+
+
 
 <div class="stats">
 
 <div class="stat">
-<h2>15K+</h2>
-<small>Members</small>
+
+<h3>FREE</h3>
+<p>Learning Content</p>
+
 </div>
+
 
 <div class="stat">
-<h2>Daily</h2>
-<small>Updates</small>
+
+<h3>FOREX</h3>
+<p>Trading Education</p>
+
 </div>
+
 
 <div class="stat">
-<h2>Free</h2>
-<small>Join</small>
-</div>
+
+<h3>24/7</h3>
+<p>Market Insights</p>
 
 </div>
 
-<div class="features">
-
-<p>✔ Educational Trading Content</p>
-
-<p>✔ Market Analysis & News</p>
-
-<p>✔ Community Discussions</p>
-
-<p>✔ Beginner Friendly</p>
 
 </div>
 
-<a class="join"
-href="https://t.me/+BBvKFWBef5cyYzk1"
-target="_blank">
 
-🚀 JOIN FREE TELEGRAM
+
+<div class="card">
+
+<h2>
+
+Join The Community
+
+</h2>
+
+<p>
+
+Become a part of the Traders Paradise Academy Telegram community and start learning Forex Trading with structured educational content, market insights, and practical trading knowledge.
+
+</p>
+
+
+<center>
+
+<a href="https://t.me/+BBvKFWBef5cyYzk1"
+class="btn">
+
+JOIN TELEGRAM NOW
 
 </a>
 
-<div class="small">
-
-Trusted by thousands of traders.
+</center>
 
 </div>
 
+
+
+<div class="footer">
+
+© 2026 Traders Paradise Academy<br>
+
+Learn. Trade. Grow.
+
 </div>
 
-</section>
+
+</div>
 
 </body>
 </html>
